@@ -1,0 +1,8 @@
+body {
+	background: lightyellow;
+
+  	@include bp(large) {
+    	background: lightblue;
+	}
+}
+

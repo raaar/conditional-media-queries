@@ -1,0 +1,17 @@
+@mixin bp($point) {
+  @if ($MQs) {
+    $bp-babybear: "(max-width: 600px)";
+    $bp-mamabear: "(max-width: 1250px)";
+    $bp-papabear: "(max-width: 1600px)";
+  
+    @if $point == large {
+      @media #{$bp-papabear} { @content; }
+    }
+    @else if $point == medium {
+      @media #{$bp-mamabear} { @content; }
+    }
+    @else if $point == small {
+      @media #{$bp-babybear}  { @content; }
+    }
+  }
+}
